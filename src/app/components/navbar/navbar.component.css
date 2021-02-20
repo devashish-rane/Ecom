@@ -1,0 +1,40 @@
+.navbar-button {
+    border-radius: 5px;
+    font-size: 25px;
+    background-color: rgb(51, 115, 235);
+    margin-left:5px ;
+    margin-right:5px ;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    align-items: center;
+    height: 60px;
+}
+.icon{
+    color: red;
+    font-size: 40px;
+}
+.aclass{
+    color: red;
+    font-size: 50px;
+}
+.navbar-link{
+    display: flex;
+    flex:1;
+    justify-content:left;
+   
+    align-items: center;
+}
+.navbar-link > a {
+   color:black;
+   font-size: 20px;
+   margin-left: 15px;
+   text-decoration: none;
+   
+}
+.navbar-search{
+    border-radius: 5px;
+    font-size: 25px;
+}
