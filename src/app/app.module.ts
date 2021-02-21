@@ -7,17 +7,24 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { ListComponent } from './components/list/list.component';
 import { from } from 'rxjs';
+import { AuthComponent } from './components/auth/auth.component';
+
+//importing font awesome
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SliderComponent,
-    ListComponent
+    ListComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
+
   ],
   providers: [CartService],
   bootstrap: [AppComponent]
