@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/Interface/Product';
 
 //importing services for cart
 import { CartService } from "../../services/cart.service";
@@ -14,7 +15,7 @@ export class UiComponent implements OnInit {
 
   constructor(private  cartService: CartService) { }
 
-  productList : {id:number,name :string}[] = [];
+  productList : Product[] = [];
   
   
   ngOnInit(): void {

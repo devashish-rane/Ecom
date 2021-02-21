@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
+import { Product } from '../Interface/Product';
 
-let data: { id: number, name: string }[] =  [
+let data: Product[] =  [
   {
     id:1,
     name:"dev"

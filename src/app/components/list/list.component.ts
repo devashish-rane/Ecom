@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Product } from 'src/app/Interface/Product';
 import { ProductService } from 'src/app/services/product.service';
 
 
@@ -14,20 +15,20 @@ import { ProductService } from 'src/app/services/product.service';
 
 export class ListComponent implements OnInit {
 
-   @Input() productList : {id:number,name :string}[]=[];
-   productsAll : {id:number,name :string}[] = this.productService.getAllProducts();
+   @Input() productList : Product[]=[];
+   productsAll : Product[] = this.productService.getAllProducts();
 
   constructor(private productService :ProductService) { }
 
   ngOnInit(): void {
   }
 
-  add(product :{id:number,name :string}){
+  add(product :Product){
     this.productList.push(product);
     //console.log(product);
     
   }
-  remove(product :{id:number,name :string}){
+  remove(product :Product){
 
     this.productList.splice(this.productList.indexOf(product), 1);
   }
