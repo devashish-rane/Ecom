@@ -1,6 +1,6 @@
 
 
 <ul>
-    <li *ngFor="let product of productList"> {{product.id}} -> {{product.name}} <button (click)="addToCart(product)">Add</button> <button (click)="deleteFromCart(product)">Delete</button></li>
+    <li *ngFor="let product of productsAll"> {{product.id}} -> {{product.name}} <button (click)="add(product)">Add</button> <button (click)="remove(product)">Delete</button></li>
 
 </ul>

@@ -7,13 +7,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { ListComponent } from './components/list/list.component';
 import { from } from 'rxjs';
+import { UiComponent } from './components/ui/ui.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SliderComponent,
-    ListComponent
+    ListComponent,
+    UiComponent
   ],
   imports: [
     BrowserModule,

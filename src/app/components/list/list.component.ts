@@ -1,20 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/services/product.service';
 
-//importing services for cart
-import { CartService } from "../../services/cart.service";
 
-let data: { id: number, name: string }[] =  [
-  {
-    id:1,
-    name:"dev"
-  },{
-    id:2,
-    name:"=mac"
-  },{
-    id:3,
-    name:"anu"
-  }
-]
+
+
 
 
 @Component({
@@ -25,21 +14,31 @@ let data: { id: number, name: string }[] =  [
 
 export class ListComponent implements OnInit {
 
- productList : {id:number,name :string}[] = data;
-  constructor(private  cartService: CartService) { }
+   @Input() productList : {id:number,name :string}[]=[];
+   productsAll : {id:number,name :string}[] = this.productService.getAllProducts();
+
+  constructor(private productService :ProductService) { }
+
   ngOnInit(): void {
   }
 
-
-  addToCart(currentProduct : {id:number,name :string}){
-      this.cartService.add(currentProduct);
-      console.log(this.cartService.cart);  
+  add(product :{id:number,name :string}){
+    this.productList.push(product);
+    //console.log(product);
+    
   }
-  deleteFromCart(currentProduct : {id:number,name :string}){
-    this.cartService.remove(currentProduct);
-    console.log(this.cartService.cart);  
-  }
+  remove(product :{id:number,name :string}){
 
+    this.productList.splice(this.productList.indexOf(product), 1);
+  }
+  clear(){
+    this.productList=[];
+  }
+  getSize()  {
+    return this.productList.length;
+  }
   
+  
+    
 
 }
