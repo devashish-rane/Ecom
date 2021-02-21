@@ -8,6 +8,10 @@ import { SliderComponent } from './components/slider/slider.component';
 import { ListComponent } from './components/list/list.component';
 import { from } from 'rxjs';
 import { UiComponent } from './components/ui/ui.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { PremiumComponent } from './components/premium/premium.component';
+import { AboutComponent } from './components/about/about.component';
+import { SellComponent } from './components/sell/sell.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { UiComponent } from './components/ui/ui.component';
     NavbarComponent,
     SliderComponent,
     ListComponent,
-    UiComponent
+    UiComponent,
+    CategoriesComponent,
+    PremiumComponent,
+    AboutComponent,
+    SellComponent
   ],
   imports: [
     BrowserModule,
